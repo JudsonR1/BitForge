@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #00d084; /* Vibrant Green */
+    --primary-hover-color: #00b371; /* Darker Green */
+    --background-light: #ffffff;
+    --form-background: #f8f9fa;
+    --text-dark: #333333;
+    --text-light: #f4f4f9;
+    --border-color: #ced4da;
+    --label-color: #6c757d;
+}
+
+body {
+    margin: 0;
+    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-light);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    padding: 2rem;
+}
+
+#border {
+    background-color: var(--background-light);
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+#createAccount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    padding-bottom: 2rem;
+}
+
+.relative {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.relative input, select {
+    outline: none;
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem;
+    width: 100%;
+    background-color: var(--background-light);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    box-sizing: border-box; 
+}
+
+.relative label {
+    color: var(--label-color);
+    background-color: var(--background-light);
+    position: absolute;
+    top: 0.85rem;
+    left: 0.75rem;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    padding: 0 0.25rem;
+}
+
+.relative input:focus, select:focus {
+    border-color: var(--primary-color);
+}
+
+.relative input:focus ~ label, 
+.relative input:not(:placeholder-shown) ~ label {
+    top: -0.7rem;
+    left: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+}
+
+#justifySpaceBetween {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#justifySpaceBetween .relative {
+    width: 33%;
+}
+
+#justifySpaceBetween .relative input {
+    text-align: center;
+}
+
+select {
+    color: var(--text-dark);
+    appearance: none;
+    cursor: pointer;
+}
+
+select option {
+    background-color: var(--background-light);
+    color: var(--text-dark);
+}
+
+#gender {
+    width: 100%;
+}
+
+label#agree {
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+button {
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.signin-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--label-color);
+}
+
+.signin-link a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.signin-link a:hover {
+    text-decoration: underline;
+    color: var(--primary-hover-color);
+}
