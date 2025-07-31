@@ -63,9 +63,6 @@ app.get("/home", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "home-page", "home.html"));
 });
 
-app.get("/chatime", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "detail-page", "chatime.html"));
-});
 
 app.get("/chat", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "chat-page", "chat.html"));
@@ -131,49 +128,6 @@ app.post("/login", (req, res) => {
         res.json({ token: token, redirectUrl: "/home" });
     });
 });
-
-
-app.post('/addProduct', (req, res) => {
-    const { productname, price, category } = req.body;
-    const sql = 'INSERT INTO product (productname, price, category) VALUES (?, ?, ?)';
-    db.query(sql, [productname, price, category], (err, result) => {
-        if (err) {
-            console.error('Error inserting product data: ' + err);
-            return res.status(500).json({ message: 'Internal server error' });
-        }
-        res.status(200).json({ message: 'Product added successfully' });
-    });
-});
-
-
-app.post('/addOrder', (req, res) => {
-    const { productid, userid, subtotal, quantity } = req.body;
-    const sql = 'INSERT INTO orders (productid, userid, subtotal, quantity) VALUES (?, ?, ?, ?)';
-    db.query(sql, [productid, userid, subtotal, quantity], (err, result) => {
-        if (err) {
-            console.error('Error inserting order data: ' + err);
-            return res.status(500).json({ message: 'Internal server error' });
-        }
-        res.status(200).json({ message: 'Order added successfully' });
-    });
-});
-
-
-app.get('/orders', (req, res) => {
-    const sql = `
-        SELECT orders.orderid, product.productname, account.username, orders.date, orders.subtotal, orders.quantity 
-        FROM orders 
-        JOIN product ON orders.productid = product.productid 
-        JOIN account ON orders.userid = account.id`;
-    db.query(sql, (err, results) => {
-        if (err) {
-            console.error('Error fetching orders: ' + err);
-            return res.status(500).json({ message: 'Internal server error' });
-        }
-        res.json(results);
-    });
-});
-
 
 const PORT = process.env.PORT || 8080;
 server.listen(PORT, () => {
