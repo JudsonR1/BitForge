@@ -1,5 +1,4 @@
 ﻿# BitForge
-BitForge Pre-Built PC Website
 Welcome to the BitForge project! This is a dynamic, multi-page website for a fictional company that sells pre-built gaming PCs and professional workstations. The site is designed to be modern, user-friendly, and fully interactive, featuring both a frontend user interface and a backend server.
 
 🚀 Features
@@ -57,3 +56,4 @@ Browse & Shop: Explore the products, view details, and add items to your cart.
 Chat: Use the chat feature to communicate in real-time.
 
 Manage Your Profile: Visit your profile to see your details and order history.
+
