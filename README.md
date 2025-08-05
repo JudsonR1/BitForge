@@ -1,5 +1,5 @@
 ﻿# BitForge
-Welcome to the BitForge project! This is a dynamic, multi-page website for a fictional company that sells pre-built gaming PCs and professional workstations. The site is designed to be modern, user-friendly, and fully interactive, featuring both a frontend user interface and a backend server.
+Welcome to the BitForge project! This is a dynamic, multi-page website for a fictional company that sells pre-built gaming PCs and professional workstations. The site is designed to be modern, user-friendly, and fully interactive, featuring a working frontend user interface and a backend server for user login/signup feature.
 
 🚀 Features
 User Authentication: Secure sign-up and login system for users to manage their accounts, handled by a Node.js backend.
@@ -56,4 +56,5 @@ Browse & Shop: Explore the products, view details, and add items to your cart.
 Chat: Use the chat feature to communicate in real-time.
 
 Manage Your Profile: Visit your profile to see your details and order history.
+
 
