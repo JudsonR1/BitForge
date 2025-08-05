@@ -14,7 +14,7 @@ Interactive Shopping Cart: Users can add items to their cart, view the contents,
 
 User Profiles: A dedicated profile page where users can view their information and order history.
 
-Responsive Design: The website is designed to be fully responsive and accessible on desktops, tablets, and mobile devices.
+Working Product search bar: Functional search on the home page to find specific products based on name.
 
 🛠️ Tech Stack
 Frontend: HTML5, CSS3, JavaScript
@@ -56,5 +56,6 @@ Browse & Shop: Explore the products, view details, and add items to your cart.
 Chat: Use the chat feature to communicate in real-time.
 
 Manage Your Profile: Visit your profile to see your details and order history.
+
 
 
